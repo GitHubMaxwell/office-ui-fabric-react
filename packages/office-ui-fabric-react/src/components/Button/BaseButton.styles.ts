@@ -87,8 +87,7 @@ export const getStyles = memoizeFunction(
       },
 
       menuIconDisabled: {
-        color: disabledText // original
-        // color: 'red'
+        color: disabledText
       },
 
       flexContainer: {

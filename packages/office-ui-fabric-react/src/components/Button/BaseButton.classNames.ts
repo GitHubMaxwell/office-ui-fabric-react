@@ -36,7 +36,9 @@ export const getBaseButtonClassNames = memoizeFunction(
     disabled: boolean,
     checked: boolean,
     expanded: boolean,
-    isSplit: boolean | undefined
+    isSplit: boolean | undefined,
+    //////// added
+    primaryDisabled: boolean
   ): IButtonClassNames => {
     const classNames = getGlobalClassNames(ButtonGlobalClassNames, theme || {});
 
@@ -102,7 +104,8 @@ export const getBaseButtonClassNames = memoizeFunction(
         menuIconClassName,
         styles.menuIcon,
         checked && styles.menuIconChecked,
-        disabled && styles.menuIconDisabled,
+        // disabled && styles.menuIconDisabled, // original
+        disabled && !primaryDisabled && styles.menuIconDisabled,
         !disabled &&
           !isExpanded &&
           !checked && {

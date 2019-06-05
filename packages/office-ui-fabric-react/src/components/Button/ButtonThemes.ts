@@ -215,11 +215,12 @@ export function primaryStyles(theme: ITheme): IButtonStyles {
 
     splitButtonMenuIcon: {
       color: theme.palette.white
+      // color: 'red'
     },
 
     splitButtonMenuIconDisabled: {
-      // color: theme.palette.neutralTertiary // orignal
-      color: 'red'
+      color: theme.palette.neutralTertiary // orignal
+      // color: 'red'
     }
   };
 }

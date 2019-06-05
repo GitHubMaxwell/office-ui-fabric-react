@@ -107,8 +107,9 @@ export class BaseButton extends BaseComponent<IBaseButtonProps, IBaseButtonState
     } = this.props;
 
     // Button is disabled if the whole button (in case of splitbutton is disabled) or if the primary action is disabled
+    ///////
     const isPrimaryButtonDisabled = disabled || primaryDisabled;
-
+    ///////
     this._classNames = getClassNames
       ? getClassNames(
           theme!,
@@ -132,7 +133,9 @@ export class BaseButton extends BaseComponent<IBaseButtonProps, IBaseButtonState
           isPrimaryButtonDisabled!,
           checked!,
           this._isExpanded,
-          this.props.split
+          this.props.split,
+          /////// added
+          primaryDisabled!
         );
 
     const { _ariaDescriptionId, _labelId, _descriptionId } = this;

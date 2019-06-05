@@ -11,17 +11,12 @@ export interface ISplitButtonClassNames {
 }
 
 export const getClassNames = memoizeFunction(
-  (styles: IButtonStyles, disabled: boolean, expanded: boolean, checked: boolean, primaryDisabled: boolean): ISplitButtonClassNames => {
-    // i need primaryDisabled given in here
-    if (primaryDisabled) {
-      console.log('PRI DIS:', primaryDisabled);
-    }
+  (styles: IButtonStyles, disabled: boolean, expanded: boolean, checked: boolean): ISplitButtonClassNames => {
     return {
       root: mergeStyles(
         styles.splitButtonMenuButton,
         expanded && [styles.splitButtonMenuButtonExpanded],
-        disabled && [styles.splitButtonMenuButtonDisabled], // orignal
-        // disabled && primaryDisabled && [styles.splitButtonMenuButtonDisabled],
+        disabled && [styles.splitButtonMenuButtonDisabled],
         checked && !disabled && [styles.splitButtonMenuButtonChecked]
       ),
 
@@ -48,7 +43,7 @@ export const getClassNames = memoizeFunction(
         disabled && styles.splitButtonContainerDisabled
       ),
 
-      icon: mergeStyles(styles.splitButtonMenuIcon, disabled && primaryDisabled && styles.splitButtonMenuIconDisabled),
+      icon: mergeStyles(styles.splitButtonMenuIcon, disabled && styles.splitButtonMenuIconDisabled),
 
       flexContainer: mergeStyles(styles.splitButtonFlexContainer),
 
