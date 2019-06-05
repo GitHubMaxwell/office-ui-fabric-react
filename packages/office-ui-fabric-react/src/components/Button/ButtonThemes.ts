@@ -182,6 +182,7 @@ export function primaryStyles(theme: ITheme): IButtonStyles {
 
     splitButtonMenuButton: {
       backgroundColor: theme.palette.themePrimary,
+      // backgroundColor: 'red',
       color: theme.palette.white,
       selectors: {
         ':hover': {
@@ -217,7 +218,8 @@ export function primaryStyles(theme: ITheme): IButtonStyles {
     },
 
     splitButtonMenuIconDisabled: {
-      color: theme.palette.neutralTertiary
+      // color: theme.palette.neutralTertiary // orignal
+      color: 'red'
     }
   };
 }
