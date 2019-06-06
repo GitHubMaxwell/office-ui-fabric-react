@@ -36,9 +36,7 @@ export const getBaseButtonClassNames = memoizeFunction(
     disabled: boolean,
     checked: boolean,
     expanded: boolean,
-    isSplit: boolean | undefined,
-    //////// added
-    primaryDisabled: boolean
+    isSplit: boolean | undefined
   ): IButtonClassNames => {
     const classNames = getGlobalClassNames(ButtonGlobalClassNames, theme || {});
 
@@ -105,7 +103,8 @@ export const getBaseButtonClassNames = memoizeFunction(
         styles.menuIcon,
         checked && styles.menuIconChecked,
         // disabled && styles.menuIconDisabled, // original
-        disabled && !primaryDisabled && styles.menuIconDisabled,
+        // (below) need to prevent this line from targeting split buttons
+        disabled && !isSplit && styles.menuIconDisabled,
         !disabled &&
           !isExpanded &&
           !checked && {

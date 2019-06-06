@@ -177,12 +177,17 @@ export function primaryStyles(theme: ITheme): IButtonStyles {
     },
 
     splitButtonDivider: {
-      backgroundColor: theme.palette.themeLighter
+      // backgroundColor: theme.palette.themeLighter // original
+      backgroundColor: theme.palette.white
+    },
+
+    splitButtonDividerDisabled: {
+      // backgroundColor: theme.palette.themeLighter // original
+      backgroundColor: theme.palette.neutralTertiaryAlt
     },
 
     splitButtonMenuButton: {
       backgroundColor: theme.palette.themePrimary,
-      // backgroundColor: 'red',
       color: theme.palette.white,
       selectors: {
         ':hover': {
@@ -215,12 +220,10 @@ export function primaryStyles(theme: ITheme): IButtonStyles {
 
     splitButtonMenuIcon: {
       color: theme.palette.white
-      // color: 'red'
     },
 
     splitButtonMenuIconDisabled: {
-      color: theme.palette.neutralTertiary // orignal
-      // color: 'red'
+      color: theme.palette.neutralTertiary
     }
   };
 }
