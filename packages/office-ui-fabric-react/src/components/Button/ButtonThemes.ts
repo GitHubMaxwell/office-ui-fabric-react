@@ -177,12 +177,10 @@ export function primaryStyles(theme: ITheme): IButtonStyles {
     },
 
     splitButtonDivider: {
-      // backgroundColor: theme.palette.themeLighter // original
       backgroundColor: theme.palette.white
     },
 
     splitButtonDividerDisabled: {
-      // backgroundColor: theme.palette.themeLighter // original
       backgroundColor: theme.palette.neutralTertiaryAlt
     },
 

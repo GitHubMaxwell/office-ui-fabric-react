@@ -102,8 +102,6 @@ export const getBaseButtonClassNames = memoizeFunction(
         menuIconClassName,
         styles.menuIcon,
         checked && styles.menuIconChecked,
-        // disabled && styles.menuIconDisabled, // original
-        // (below) need to prevent this line from targeting split buttons
         disabled && !isSplit && styles.menuIconDisabled,
         !disabled &&
           !isExpanded &&

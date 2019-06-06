@@ -45,7 +45,6 @@ export const getClassNames = memoizeFunction(
 
       icon: mergeStyles(
         styles.splitButtonMenuIcon,
-        // disabled && styles.splitButtonMenuIconDisabled, // original
         disabled && styles.splitButtonMenuIconDisabled,
         !disabled && primaryDisabled && styles.splitButtonMenuIcon
       ),

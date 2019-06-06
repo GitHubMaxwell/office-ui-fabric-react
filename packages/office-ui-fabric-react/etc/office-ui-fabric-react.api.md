@@ -1930,6 +1930,7 @@ export interface IButtonStyles {
     splitButtonContainerFocused?: IStyle;
     splitButtonContainerHovered?: IStyle;
     splitButtonDivider?: IStyle;
+    splitButtonDividerDisabled?: IStyle;
     splitButtonFlexContainer?: IStyle;
     splitButtonMenuButton?: IStyle;
     splitButtonMenuButtonChecked?: IStyle;
