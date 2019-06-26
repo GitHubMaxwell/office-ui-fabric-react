@@ -2,7 +2,7 @@
   "changes": [
     {
       "packageName": "@uifabric/fluent-theme",
-      "comment": "Updated margin to match toolkit",
+      "comment": "Tooltip: Updates box shadow to match toolkit",
       "type": "patch"
     }
   ],
