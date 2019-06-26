@@ -25,6 +25,8 @@ export const ContextualMenuStyles = (props: IContextualMenuStyleProps): Partial<
     }
   };
 
+  const splitMenu = 'ms-ContextualMenu-splitMenu';
+
   return {
     subComponentStyles: {
       callout: {
@@ -84,12 +86,10 @@ export const ContextualMenuStyles = (props: IContextualMenuStyleProps): Partial<
               lineHeight: CONTEXTUAL_MENU_ITEM_HEIGHT,
               selectors: {
                 ':hover': {
-                  backgroundColor: palette.neutralLighter,
-                  selectors: {
-                    '~$splitMenu': {
-                      backgroundColor: palette.white
-                    }
-                  }
+                  backgroundColor: palette.neutralLighter
+                },
+                [`:hover ~.${splitMenu}`]: {
+                  backgroundColor: palette.white
                 }
               }
             },
@@ -130,6 +130,7 @@ export const ContextualMenuStyles = (props: IContextualMenuStyleProps): Partial<
             }
           ],
           splitMenu: [
+            splitMenu,
             {
               height: CONTEXTUAL_MENU_ITEM_HEIGHT,
               lineHeight: CONTEXTUAL_MENU_ITEM_HEIGHT,
