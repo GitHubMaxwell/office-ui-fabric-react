@@ -1,0 +1,8 @@
+{
+  "type": "patch",
+  "comment": "SwatchColorPicker: Added missing border on selected-hover state",
+  "packageName": "office-ui-fabric-react",
+  "email": "v-mare@microsoft.com",
+  "commit": "a37479f4c990daf5ab7653930296f5c179ee417a",
+  "date": "2019-09-27T17:59:25.976Z"
+}
